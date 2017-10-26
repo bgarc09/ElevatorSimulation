@@ -3,6 +3,7 @@ public class Building {
     private int floors;
     private int elevators;
     private ElevatorSystem elevatorSystem;
+    private int temp;
 
     public Building(String name, int floors, int elevators) {
         this.name = name;
