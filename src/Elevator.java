@@ -4,6 +4,8 @@ public abstract class Elevator {
     private int currentLevel;
     private int floorsTraveled;
     private int capacity;
+    private int doorOpened;
+    private int doorClosed;
 
     public Elevator() {
         currentLevel = 0;
@@ -17,7 +19,7 @@ public abstract class Elevator {
 
     public void down() {
         currentLevel--;
-        floorsTraveled;
+        floorsTraveled++;
     }
 
     public String getId() {
@@ -84,5 +86,29 @@ public abstract class Elevator {
         result = 31 * result + getFloorsTraveled();
         result = 31 * result + getCapacity();
         return result;
+    }
+
+    public int getDoorOpened() {
+        return doorOpened;
+    }
+
+    public void setDoorOpened(int doorOpened) {
+        this.doorOpened = doorOpened;
+    }
+
+    public int getDoorClosed() {
+        return doorClosed;
+    }
+
+    public void setDoorClosed(int doorClosed) {
+        this.doorClosed = doorClosed;
+    }
+
+    public void openDoor() {
+        doorOpened++;
+    }
+
+    public void closeDoor() {
+        doorClosed++;
     }
 }
